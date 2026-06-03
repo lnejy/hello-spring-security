@@ -52,5 +52,10 @@
         </div>
     </div>
 </div>
+<footer class="text-center text-white-50 small py-3">
+    실습 수행 일시:
+    <span th:text="${#temporals.format(#temporals.createNow(), 'yyyy년 MM월 dd일 HH:mm:ss')}"></span>
+    &nbsp;│&nbsp; 학번: 2371263 &nbsp;│&nbsp; 성명: 원재연
+</footer>
 </body>
 </html>
