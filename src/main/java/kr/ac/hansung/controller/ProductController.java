@@ -55,11 +55,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public String save(@Valid @ModelAttribute("product") ProductDto dto,
-                       BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return "products/add";
-        }
+    public String save(@ModelAttribute ProductDto dto) {
         productService.save(dto);
         return "redirect:/products";
     }
